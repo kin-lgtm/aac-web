@@ -1,6 +1,6 @@
 // src/pages/Blog.tsx
 import { useState } from 'react';
-import { Search, Calendar, User, ArrowRight, Tag } from 'lucide-react';
+import { Search, Calendar, ArrowRight, Tag } from 'lucide-react';
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -168,7 +168,11 @@ const Blog = () => {
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
+            
+          </div>
+        </div>
+      </section>
+      <div className="max-w-2xl mx-auto mt-20">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
                 <input
@@ -176,14 +180,10 @@ const Blog = () => {
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300"
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main Content */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
