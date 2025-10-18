@@ -84,7 +84,7 @@ const Resources = () => {
                   <p className="text-gray-600 mb-4">{resource.description}</p>
                   <a
                     href={resource.link}
-                    className="inline-flex items-center bg-primary-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+                    className="inline-flex items-center bg-green-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
                   >
                     Download
                     <Download className="ml-2 h-5 w-5" />
@@ -119,7 +119,7 @@ const Resources = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                  className="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors"
                 >
                   Visit Site
                   <ExternalLink className="ml-2 h-5 w-5" />
