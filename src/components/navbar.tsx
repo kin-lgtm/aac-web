@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -41,12 +40,12 @@ const Navbar: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-[#2d5016] h-[100px] shadow-lg sticky top-0 z-50">
+    <nav className="bg-white h-[100px] shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[100px]">
           {/* Logo and Brand */}
           <Link to="/" className="flex items-center space-x-4">
-            <div className="bg-white p-3 rounded-full overflow-hidden">
+            <div className="bg-green-600 p-3 rounded-full overflow-hidden">
               <img
                 src="/logo.png"
                 alt="Asian Agricultural Consultancies Logo"
@@ -55,9 +54,9 @@ const Navbar: React.FC = () => {
                 className="object-contain"
               />
             </div>
-            <div className="text-white">
-              <h1 className="text-2xl ">Asian Agricultural</h1>
-              <p className="text-sm text-green-200">Consultancies</p>
+            <div className="text-gray-800">
+              <h1 className="text-2xl font-bold">Asian Agricultural</h1>
+              <p className="text-sm text-green-600">Consultancies</p>
             </div>
           </Link>
 
@@ -68,33 +67,46 @@ const Navbar: React.FC = () => {
                 <div key={item.name} className="relative">
                   <Link
                     to={item.href}
-                    className={`text-white hover:text-green-200 px-4 py-3 rounded-md text-base font-medium transition-all duration-300 flex items-center space-x-1 ${
-                      isActive(item.href) ? 'bg-green-700/50' : ''
+                    className={`text-gray-800 hover:text-green-600 px-4 py-3 rounded-md text-base font-medium transition-all duration-300 flex items-center space-x-1 ${
+                      isActive(item.href) ? ' text-green-700' : ''
                     }`}
                     onMouseEnter={() => item.hasSubmenu && setIsServicesDropdownOpen(true)}
                     onMouseLeave={() => item.hasSubmenu && setIsServicesDropdownOpen(false)}
                   >
                     <span>{item.name}</span>
                     {item.hasSubmenu && (
-                      <ChevronDown className="h-4 w-4 ml-1" />
+                      <ChevronDown 
+                        className={`h-4 w-4 ml-1 transition-transform duration-300 ${
+                          isServicesDropdownOpen ? 'rotate-180' : ''
+                        }`} 
+                      />
                     )}
                   </Link>
-                  {item.hasSubmenu && isServicesDropdownOpen && (
+                  {item.hasSubmenu && (
                     <div
-                      className="w-[240px] absolute top-full left-0 bg-white shadow-lg py-2 rounded-lg mt-1"
+                      className={`w-[240px] absolute top-full left-0 bg-white shadow-xl rounded-lg mt-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isServicesDropdownOpen 
+                          ? 'opacity-100 translate-y-0 visible' 
+                          : 'opacity-0 -translate-y-2 invisible'
+                      }`}
                       onMouseEnter={() => setIsServicesDropdownOpen(true)}
                       onMouseLeave={() => setIsServicesDropdownOpen(false)}
                     >
-                      {servicesSubmenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-gray-800 hover:bg-green-100 transition-colors"
-                          onClick={() => setIsServicesDropdownOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
+                      <div className="py-2">
+                        {servicesSubmenu.map((subItem, index) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 transition-all duration-200"
+                            onClick={() => setIsServicesDropdownOpen(false)}
+                            style={{
+                              transitionDelay: isServicesDropdownOpen ? `${index * 50}ms` : '0ms'
+                            }}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -106,7 +118,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-green-200 p-3 rounded-md"
+              className="text-gray-800 hover:text-green-600 p-3 rounded-md"
             >
               {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
             </button>
@@ -115,14 +127,14 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-green-900/95 backdrop-blur-sm rounded-lg mb-4">
+          <div className="md:hidden bg-gray-50 backdrop-blur-sm rounded-lg mb-4 border border-gray-200">
             <div className="px-4 pt-4 pb-3 space-y-2">
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
                     to={item.href}
-                    className={`text-white hover:text-green-200 block px-4 py-3 rounded-md text-lg font-medium transition-all duration-300 flex items-center space-x-2 hover:bg-green-600/30 ${
-                      isActive(item.href) ? 'bg-green-700/50' : ''
+                    className={`text-gray-800 hover:text-green-600 block px-4 py-3 rounded-md text-lg font-medium transition-all duration-300 flex items-center space-x-2 hover:bg-green-50 ${
+                      isActive(item.href) ? 'bg-green-100 text-green-700' : ''
                     }`}
                     onClick={() => (item.hasSubmenu ? null : setIsMenuOpen(false))}
                   >
@@ -132,12 +144,12 @@ const Navbar: React.FC = () => {
                     )}
                   </Link>
                   {item.hasSubmenu && (
-                    <div className="pl-6 space-y-1 mt-2">
+                    <div className="pl-6 space-y-1 mt-2 border-l-2 border-green-200 ml-4">
                       {servicesSubmenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="text-white hover:text-green-200 block px-4 py-2 rounded-md text-base font-medium transition-all duration-300 hover:bg-green-600/30"
+                          className="text-gray-700 hover:text-green-600 block px-4 py-2 rounded-md text-base font-medium transition-all duration-300 hover:bg-green-50"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {subItem.name}

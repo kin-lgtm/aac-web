@@ -148,7 +148,7 @@ const Home = () => {
       </section>
 
       {/* About Snippet */}
-      <section className="py-20 bg-gray-300">
+      <section className="py-20 bg-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl  text-gray-800 mb-6">
@@ -259,17 +259,17 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-primary-600 text-white">
+      <section className="py-20 bg-white text-gray-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>
             <div>
-              <Users className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl  mb-2">500+</div>
-              <div className="text-primary-100">Happy Farmers</div>
+              <Users className="h-12 w-12 mx-auto mb-4 opacity-80 " />
+              <div className="text-4xl mb-2">500+</div>
+              <div className=" text-primary-100">Happy Farmers</div>
             </div>
             <div>
               <Award className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl  mb-2">150+</div>
+              <div className="text-4xl mb-2">150+</div>
               <div className="text-primary-100">Successful Projects</div>
             </div>
             <div>
@@ -287,7 +287,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl  text-gray-800 mb-4">What Our Clients Say</h2>
