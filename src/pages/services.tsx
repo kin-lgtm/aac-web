@@ -1,10 +1,7 @@
-// src/pages/Services.tsx
-import { useState } from 'react';
-import { ChevronDown, ChevronUp, Sprout, GraduationCap, FlaskConical, Laptop, TrendingUp, FileCheck, Droplet, Leaf } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Sprout, GraduationCap, FlaskConical, Laptop, TrendingUp, Droplet, Leaf } from 'lucide-react';
 
 const Services = () => {
-  const [expandedService, setExpandedService] = useState<number | null>(0);
-
   const services = [
     {
       icon: <Sprout className="h-12 w-12" />,
@@ -19,6 +16,9 @@ const Services = () => {
         'Supply chain optimization',
       ],
       benefits: 'Increase profitability by 30-50% through optimized farming practices and strategic planning.',
+      bgColor: 'from-purple-600 to-purple-800',
+      image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800',
+      link: '/services/agricultural-consulting',
     },
     {
       icon: <GraduationCap className="h-12 w-12" />,
@@ -33,10 +33,13 @@ const Services = () => {
         'Farm safety and best practices',
       ],
       benefits: 'Over 1000 farmers trained with 95% satisfaction rate. Hands-on training with expert instructors.',
+      bgColor: 'from-green-700 to-green-900',
+      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800',
+      link: '/services/training-workshops',
     },
     {
       icon: <FlaskConical className="h-12 w-12" />,
-      title: 'Soil Testing & Analysis',
+      title: 'Organic Certification Assistance',
       shortDesc: 'Comprehensive soil health assessment and recommendations',
       features: [
         'Complete soil nutrient analysis',
@@ -47,6 +50,9 @@ const Services = () => {
         'Custom fertilizer recommendations',
       ],
       benefits: 'Scientifically-backed recommendations that improve soil health and crop yields by up to 40%.',
+      bgColor: 'from-yellow-700 to-yellow-900',
+      image: 'https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=800',
+      link: '/services/certification',
     },
     {
       icon: <Laptop className="h-12 w-12" />,
@@ -61,6 +67,9 @@ const Services = () => {
         'Data analytics and yield prediction',
       ],
       benefits: 'Reduce operational costs by 25% while increasing efficiency and crop quality through technology.',
+      bgColor: 'from-blue-600 to-blue-800',
+      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800',
+      link: '/services/smart-farming',
     },
     {
       icon: <Droplet className="h-12 w-12" />,
@@ -75,6 +84,9 @@ const Services = () => {
         'Performance monitoring and reporting',
       ],
       benefits: 'Streamline operations and maximize efficiency with professional farm management services.',
+      bgColor: 'from-teal-600 to-teal-800',
+      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800',
+      link: '/services/farm-management',
     },
     {
       icon: <TrendingUp className="h-12 w-12" />,
@@ -89,20 +101,9 @@ const Services = () => {
         'Custom research projects',
       ],
       benefits: 'Make informed decisions backed by comprehensive research and data analysis.',
-    },
-    {
-      icon: <FileCheck className="h-12 w-12" />,
-      title: 'Organic Certification Assistance',
-      shortDesc: 'Complete support for organic farming certification',
-      features: [
-        'Certification process guidance',
-        'Documentation preparation',
-        'Farm inspection readiness',
-        'Organic standards compliance training',
-        'Transition planning from conventional farming',
-        'Ongoing compliance support',
-      ],
-      benefits: 'Successfully assisted over 100 farms in achieving organic certification with 98% success rate.',
+      bgColor: 'from-indigo-600 to-indigo-800',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
+      link: '/services/research-data',
     },
     {
       icon: <Leaf className="h-12 w-12" />,
@@ -117,12 +118,22 @@ const Services = () => {
         'Trade regulation guidance',
       ],
       benefits: 'Successfully facilitated exports for 50+ clients to markets across Asia, Europe, and Middle East.',
+      bgColor: 'from-green-600 to-green-800',
+      image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800',
+      link: '/services/export-import',
     },
   ];
 
-  const toggleService = (index: number) => {
-    setExpandedService(expandedService === index ? null : index);
-  };
+  // Filter services for the new section
+  const featuredServices = services.filter(service =>
+    [
+      'Agricultural Consulting',
+      'Training & Workshops',
+      'Farm Management',
+      'Research & Data Services',
+      'Organic Certification Assistance',
+    ].includes(service.title)
+  );
 
   return (
     <div>
@@ -130,7 +141,7 @@ const Services = () => {
       <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">Our Services</h1>
+            <h1 className="text-5xl mb-6" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>Our Services</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Comprehensive agricultural solutions designed to meet your unique farming needs
             </p>
@@ -141,93 +152,46 @@ const Services = () => {
       {/* Services Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Complete Agricultural Solutions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From planning to execution, we provide end-to-end services that transform agricultural operations and maximize returns
-            </p>
-          </div>
-
-          {/* Services Grid - Quick View */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-6 rounded-xl text-center hover:bg-primary-50 transition-all cursor-pointer"
-                onClick={() => toggleService(index)}
-              >
-                <div className="text-primary-600 mx-auto mb-4">{service.icon}</div>
-                <h3 className="font-bold text-gray-800">{service.title}</h3>
+          
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl text-gray-800 mb-4" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>
+                  Our Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive agricultural solutions tailored to your needs
+                </p>
               </div>
-            ))}
-          </div>
-
-          {/* Detailed Services - Expandable */}
-          <div className="space-y-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-primary-300 transition-all"
-              >
-                <button
-                  onClick={() => toggleService(index)}
-                  className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-center space-x-4">
-                    <div className="text-primary-600">{service.icon}</div>
-                    <div className="text-left">
-                      <h3 className="text-2xl font-bold text-gray-800 mb-1">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600">{service.shortDesc}</p>
-                    </div>
-                  </div>
-                  {expandedService === index ? (
-                    <ChevronUp className="h-6 w-6 text-primary-600 flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="h-6 w-6 text-gray-400 flex-shrink-0" />
-                  )}
-                </button>
-
-                {expandedService === index && (
-                  <div className="px-6 pb-6 pt-0 border-t border-gray-200">
-                    <div className="grid md:grid-cols-2 gap-8 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {featuredServices.map((service, index) => (
+                  <div
+                    key={index}
+                    className="relative overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group h-100 flex"
+                  >
+                    {/* Left side - Colored section with text */}
+                    <div className={`w-1/2 bg-gradient-to-br ${service.bgColor} p-8 flex flex-col justify-between text-white`}>
                       <div>
-                        <h4 className="text-lg font-bold text-gray-800 mb-4">
-                          What We Offer:
-                        </h4>
-                        <ul className="space-y-3">
-                          {service.features.map((feature, fIndex) => (
-                            <li key={fIndex} className="flex items-start">
-                              <div className="bg-primary-100 rounded-full p-1 mr-3 mt-1">
-                                <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                              </div>
-                              <span className="text-gray-700">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
+                        <h3 className="text-2xl mb-3">{service.title}</h3>
+                        <p className="text-white text-opacity-90 text-sm">{service.shortDesc}</p>
                       </div>
-                      <div>
-                        <h4 className="text-lg font-bold text-gray-800 mb-4">
-                          Why Choose This Service:
-                        </h4>
-                        <div className="bg-primary-50 p-6 rounded-lg">
-                          <p className="text-gray-700 leading-relaxed">{service.benefits}</p>
-                        </div>
-                        <div className="mt-6">
-                          <button className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors w-full">
-                            Request This Service
-                          </button>
-                        </div>
-                      </div>
+                      <Link
+                        to={service.link}
+                        className="self-start bg-white text-gray-800 px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md text-sm"
+                      >
+                        Learn More
+                      </Link>
                     </div>
+
+                    {/* Right side - Image */}
+                    <div
+                      className="w-1/2 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                      style={{ backgroundImage: `url(${service.image})` }}
+                    ></div>
                   </div>
-                )}
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+       
         </div>
       </section>
 
@@ -260,24 +224,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Get Started Today
-          </h2>
-          <p className="text-xl mb-8 text-primary-100">
-            Contact us for a free consultation and discover how we can help your agricultural business thrive
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
-              Schedule Consultation
-            </button>
-            <button className="bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-800 transition-colors text-lg border-2 border-white">
-              Download Brochure
-            </button>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

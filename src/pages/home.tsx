@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, TrendingUp, ChevronLeft, ChevronRight, GraduationCap, Leaf, MessageSquare, FileText, School } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Leaf, MessageSquare, FileText, School } from 'lucide-react';
 import { useState } from 'react';
 
 const Home = () => {
@@ -91,6 +91,48 @@ const Home = () => {
       category: 'Tips',
     },
   ];
+  const galleryImages = [
+    {
+      src: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400',
+      alt: 'Organic Farming',
+      caption: 'Sustainable organic farming practices in action.',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400',
+      alt: 'Rice Fields',
+      caption: 'Lush rice fields thriving with modern techniques.',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400',
+      alt: 'Farmer at Work',
+      caption: 'Dedicated farmers cultivating the land.',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400',
+      alt: 'Crop Harvest',
+      caption: 'Harvesting crops with precision and care.',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400',
+      alt: 'Crop Harvest',
+      caption: 'Harvesting crops with precision and care.',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400',
+      alt: 'Organic Farming',
+      caption: 'Sustainable organic farming practices in action.',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400',
+      alt: 'Rice Fields',
+      caption: 'Lush rice fields thriving with modern techniques.',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400',
+      alt: 'Organic Farming',
+      caption: 'Sustainable organic farming practices in action.',
+    },
+  ];
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % projects.length);
@@ -148,10 +190,10 @@ const Home = () => {
       </section>
 
       {/* About Snippet */}
-      <section className="py-20 bg-green-100">
+      <section className="py-20 bg-gradient-to-r from-yellow-600/50 to-green-800/50 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl  text-gray-800 mb-6">
+            <h2 className="text-4xl  text-gray-800 mb-6" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>
               Leading Agricultural Consultancy in Sri Lanka
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -172,7 +214,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl  text-gray-800 mb-6">Our Services</h2>
+            <h2 className="text-4xl text-gray-800 mb-4" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Our Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive agricultural solutions tailored to your needs
             </p>
@@ -210,7 +252,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl  text-gray-800 mb-4">Success Stories</h2>
+            <h2 className="text-4xl text-gray-800 mb-4" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Success Stories</h2>
             <p className="text-xl text-gray-600">
               Real results from our agricultural projects
             </p>
@@ -258,39 +300,46 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Gallery Section */}
       <section className="py-20 bg-white text-gray-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>
-            <div>
-              <Users className="h-12 w-12 mx-auto mb-4 opacity-80 " />
-              <div className="text-4xl mb-2">500+</div>
-              <div className=" text-primary-100">Happy Farmers</div>
-            </div>
-            <div>
-              <Award className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl mb-2">150+</div>
-              <div className="text-primary-100">Successful Projects</div>
-            </div>
-            <div>
-              <TrendingUp className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl  mb-2">40%</div>
-              <div className="text-primary-100">Average Yield Increase</div>
-            </div>
-            <div>
-              <GraduationCap className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl  mb-2">1000+</div>
-              <div className="text-primary-100">Trained Farmers</div>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl text-gray-800 mb-4" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>
+              Our Work in Action
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our impact through images of sustainable farming and thriving agricultural communities.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="bg-white overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                {/* <div className="p-6 text-center">
+                  <p className="text-gray-600 font-medium" style={{ fontFamily: 'Roboto, sans-serif' }}>
+                    {image.caption}
+                  </p>
+                </div> */}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-green-100">
+      <section className="py-20 bg-gradient-to-r from-yellow-600/50 to-green-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl  text-gray-800 mb-4">What Our Clients Say</h2>
+            <h2 className="text-4xl text-gray-800 mb-4" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>What Our Clients Say</h2>
             <p className="text-xl text-gray-600">
               Trusted by farmers and agribusinesses across Sri Lanka
             </p>
@@ -317,7 +366,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl  text-gray-800 mb-4">Latest from Our Blog</h2>
+            <h2 className="text-4xl text-gray-800 mb-4" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Latest from Our Blog</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Insights and updates from the world of agriculture
             </p>

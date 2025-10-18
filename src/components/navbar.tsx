@@ -30,11 +30,11 @@ const Navbar: React.FC = () => {
   ];
 
   const servicesSubmenu: SubmenuItem[] = [
-    { name: 'Agricultural Consulting', href: '/services#consulting' },
-    { name: 'Training & Workshops', href: '/services#training' },
-    { name: 'Soil Testing', href: '/services#soil-testing' },
-    { name: 'Smart Farming', href: '/services#smart-farming' },
-    { name: 'Farm Management', href: '/services#farm-management' },
+    { name: 'Agricultural Consulting', href: '/services/agricultural-consulting' },
+    { name: 'Training & Workshops', href: '/services/training-workshops' },
+    { name: 'Organic Certification Assistance', href: '/services/certification' },
+    { name: 'Research & Data Services', href: '/services/research-data' },
+    { name: 'Farm Management', href: '/services/farm-management' },
   ];
 
   const isActive = (path: string) => location.pathname === path;

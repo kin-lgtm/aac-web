@@ -30,13 +30,31 @@ const About = () => {
   ];
 
   const partners = [
-    'Ministry of Agriculture',
-    'Sri Lanka Export Development Board',
-    'Ceylon Chamber of Commerce',
-    'Agricultural Research Institute',
-    'National Agricultural Bank',
-    'Organic Certification Association',
-  ];
+  {
+    name: 'FAO',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+  },
+  {
+    name: 'IRRI',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+  },
+  {
+    name: 'IFAD',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+  },
+  {
+    name: 'Hayleys Agriculture',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+  },
+  {
+    name: 'Browns Agri Solutions',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+  },
+  {
+    name: 'Lankem Agro',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+  },
+];
 
   const values = [
     {
@@ -162,7 +180,7 @@ const About = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl  text-gray-800 mb-4">Meet Our Team</h2>
+            <h2 className="text-4xl text-gray-800 mb-4" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Meet Our Team</h2>
             <p className="text-xl text-gray-600">
               Expert professionals dedicated to your agricultural success
             </p>
@@ -193,26 +211,53 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl  text-gray-800 mb-4">Our Partners & Clients</h2>
+            <h2 className="text-4xl text-gray-800 mb-4" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>
+              Our Partners & Clients
+            </h2>
             <p className="text-xl text-gray-600">
               Collaborating with leading organizations in the agricultural sector
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-8 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors"
-              >
-                <p className="text-gray-700 font-semibold text-center">{partner}</p>
-              </div>
-            ))}
+          <div className="overflow-hidden">
+            <div className="flex marquee gap-8">
+              {[...partners, ...partners].map((partner, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center p-4 rounded-xl min-w-[150px]"
+                  style={{ pointerEvents: 'none' }}
+                >
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} Logo`}
+                    className="h-20 w-auto object-contain mb-2"
+                  />
+                  <p className="text-gray-700 font-semibold text-center text-sm" style={{ fontFamily: 'Roboto, sans-serif' }}>
+                    {partner.name}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+        <style>{`
+          .marquee {
+            display: flex;
+            animation: marquee 20s linear infinite;
+            white-space: nowrap;
+          }
+          @keyframes marquee {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        `}</style>
       </section>
 
       {/* Registration Info */}
-      <section className="py-16 bg-primary-600 text-white">
+      <section className="py-16 bg-primary-600 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Award className="h-16 w-16 mx-auto mb-4 opacity-80" />

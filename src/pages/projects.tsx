@@ -35,7 +35,7 @@ const Projects = () => {
       location: 'Nuwara Eliya, Sri Lanka',
       country: 'Sri Lanka',
       crop: 'Tea',
-      image: 'https://images.unsplash.com/photo-1564412048748-adc18f1c3b77?w=800',
+      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800',
       date: '2023 - 2024',
       status: 'completed',
       description: 'Complete modernization of traditional tea estates with IoT sensors, automated irrigation, and quality control systems. Enhanced processing facilities and worker training programs.',
@@ -179,7 +179,7 @@ const Projects = () => {
       <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl  mb-6">Our Projects</h1>
+            <h1 className="text-5xl  mb-6" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Our Projects</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Transforming agriculture through innovative projects and sustainable solutions
             </p>
@@ -188,7 +188,7 @@ const Projects = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-white border-b">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -220,7 +220,7 @@ const Projects = () => {
       </section>
 
       {/* Filters Section */}
-      <section className="py-8 bg-gray-50 sticky top-20 z-40 border-b">
+      <section className="py-8 bg-gray-50 sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 flex-wrap">
             <div className="flex items-center gap-2 text-gray-700 font-semibold">
@@ -266,7 +266,7 @@ const Projects = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
@@ -299,7 +299,7 @@ const Projects = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl  text-gray-800 mb-3">
+                  <h3 className="text-2xl  text-gray-800 mb-3"style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>
                     {project.title}
                   </h3>
 

@@ -1,101 +1,147 @@
-import React from 'react';
-import { 
-  Leaf, 
-  MapPin, 
-  Mail, 
-  Phone, 
-  Facebook, 
-  Twitter, 
-  Instagram 
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, Facebook, Twitter, Linkedin, Globe } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-[#3c3c3c] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Organization Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="bg-white p-2 rounded-full">
-                <Leaf className="h-6 w-6 text-green-700" />
-              </div>
-              <div>
-                <h3 className="text-lg ">NEF</h3>
-                <p className="text-sm text-green-100">National Environmental Forum</p>
-              </div>
-            </div>
-            <p className="text-green-100 text-sm leading-relaxed">
-              Lets conserve the nature for the posterity - Working towards environmental protection and conservation of Sri Lankas indigenous heritage.
+    <footer className="bg-white text-gray-800 py-12 border-t-2 border-gray-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Information */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-gray-800" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              <span className="text-primary-600">AMK</span> - Asian Agricultural Consultancies
+            </h3>
+            <p className="text-sm text-gray-600 mb-2">
+              No. 53, Sri Dharmarama Road, Rathmalana
             </p>
+            <p className="text-sm text-gray-600 mb-2">
+              Registration Number: W/102846
+            </p>
+            <div className="flex space-x-4 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 transition-colors">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 transition-colors">
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Quick Links</h4>
-            {/* <ul className="space-y-2">
-              <li><a href="/" className="text-green-100 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/about" className="text-green-100 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/blog" className="text-green-100 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="/contact" className="text-green-100 hover:text-white transition-colors">Contact</a></li>
-            </ul> */}
-          </div>
-
-          {/* Our Focus */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Our Focus</h4>
-            <ul className="space-y-2 text-green-100 text-sm">
-              <li>• Indigenous Knowledge Conservation</li>
-              <li>• Environmental Protection</li>
-              <li>• Community-based Solutions</li>
-              <li>• Youth Environmental Education</li>
-              <li>• Traditional Ecological Practices</li>
+          {/* Navigation Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-gray-800" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Contact Us</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-green-300 flex-shrink-0" />
-                <span className="text-green-100 text-sm">NEF National Center, Peradeniya, Sri Lanka</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-green-300 flex-shrink-0" />
-                <span className="text-green-100 text-sm">info@nef-srilanka.org</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-green-300 flex-shrink-0" />
-                <span className="text-green-100 text-sm">+94 XX XXX XXXX</span>
-              </div>
-            </div>
-            
-            {/* Social Media */}
-            <div className="flex space-x-4 mt-4">
-              <a href="#" className="bg-green-700 p-2 rounded-full hover:bg-green-600 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="bg-green-700 p-2 rounded-full hover:bg-green-600 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="bg-green-700 p-2 rounded-full hover:bg-green-600 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
+          {/* Service Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-gray-800" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              Our Services
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services/agricultural-consulting" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Agricultural Consulting
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/training-workshops" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Training & Workshops
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/farm-management" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Farm Management
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/research-data" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Research & Data Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/organic-certification" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Organic Certification
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact and Newsletter */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-gray-800" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              Get in Touch
+            </h3>
+            <ul className="space-y-2 mb-4">
+              <li className="flex items-center text-sm text-gray-600">
+                <Mail className="h-5 w-5 mr-2 text-gray-600" />
+                info@asianagriculture.com
+              </li>
+              <li className="flex items-center text-sm text-gray-600">
+                <Phone className="h-5 w-5 mr-2 text-gray-600" />
+                +94 11 123 4567
+              </li>
+            </ul>
+            <h4 className="text-lg font-bold mb-2 text-gray-800" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              Newsletter
+            </h4>
+            <form className="flex flex-col space-y-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="px-4 py-2 rounded-lg text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-600"
+              />
+              <button className="bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                Subscribe
+              </button>
+            </form>
+            <div className="mt-4 flex items-center">
+              <Globe className="h-5 w-5 mr-2 text-gray-600" />
+              <select className="bg-transparent text-sm text-gray-600 focus:outline-none">
+                <option value="en" className="text-gray-800">English</option>
+                <option value="si" className="text-gray-800">Sinhala</option>
+                <option value="ta" className="text-gray-800">Tamil</option>
+              </select>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-green-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-green-200 text-sm">
-              © 2024 National Environmental Forum (NEF). All rights reserved.
-            </p>
-            <p className="text-green-200 text-sm mt-2 md:mt-0">
-              Established 2012 | Protecting Sri Lankas Natural Heritage
-            </p>
-          </div>
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-gray-300 text-center">
+          <p className="text-sm text-gray-600">
+            &copy; {new Date().getFullYear()} AMK - Asian Agricultural Consultancies. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

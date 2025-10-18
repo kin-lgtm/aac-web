@@ -85,7 +85,7 @@ const Blog = () => {
       id: 7,
       title: 'Tea Plantation Management: Modern Techniques for Quality',
       excerpt: 'Latest innovations in tea cultivation, from pruning techniques to processing methods that enhance quality and market value.',
-      image: 'https://images.unsplash.com/photo-1564412048748-adc18f1c3b77?w=600',
+      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600',
       category: 'crops',
       author: 'Chaminda Perera',
       date: 'September 8, 2025',
@@ -96,7 +96,7 @@ const Blog = () => {
       id: 8,
       title: 'Integrated Pest Management: Reducing Chemical Dependency',
       excerpt: 'Explore eco-friendly pest control strategies that protect crops while minimizing environmental impact and reducing costs.',
-      image: 'https://images.unsplash.com/photo-1530836176962-c77fd191f2cd?w=600',
+      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600',
       category: 'technology',
       author: 'Priya Jayawardena',
       date: 'August 30, 2025',
@@ -174,13 +174,13 @@ const Blog = () => {
       </section>
       <div className="max-w-2xl mx-auto mt-20">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-800" />
                 <input
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                  className="border border-gray-400 w-full pl-12 pr-4 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500"
                 />
               </div>
             </div>
@@ -199,14 +199,14 @@ const Blog = () => {
                       onClick={() => setSelectedCategory(category.value)}
                       className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                         selectedCategory === category.value
-                          ? 'bg-primary-600 text-white'
+                          ? 'bg-orange-100 text-orange-800'
                           : 'hover:bg-gray-200 text-gray-700'
                       }`}
                     >
                       <div className="flex justify-between items-center">
                         <span>{category.label}</span>
                         <span className={`text-sm ${
-                          selectedCategory === category.value ? 'text-primary-100' : 'text-gray-500'
+                          selectedCategory === category.value ? 'text-orange-800' : 'text-orange-800'
                         }`}>
                           {category.count}
                         </span>
@@ -313,26 +313,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 bg-primary-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Stay Updated with Our Newsletter
-          </h2>
-          <p className="text-xl mb-8 text-primary-100">
-            Get the latest agricultural insights, tips, and news delivered to your inbox
-          </p>
-          <div className="max-w-md mx-auto flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
