@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, TrendingUp, Sprout, ChevronLeft, ChevronRight, GraduationCap, Leaf, MessageSquare, FileText, School } from 'lucide-react';
+import { ArrowRight, Users, Award, TrendingUp, ChevronLeft, ChevronRight, GraduationCap, Leaf, MessageSquare, FileText, School } from 'lucide-react';
 import { useState } from 'react';
 
 const Home = () => {
@@ -102,37 +102,45 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero Section */}
       <section className="relative h-[calc(100vh-100px)] min-h-[600px] bg-black overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/hero.avif"
             alt="Asian Agriculture"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-70"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="text-center">
+            <div className="mb-4">
+              <div className="inline-block border-t-2 border-b-2 border-white py-2 px-8">
+                <p className="text-white text-sm md:text-base tracking-widest font-light uppercase">
+                  - Asian Agriculture Consultancy -
+                </p>
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight uppercase" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>
               Empowering Asian Agriculture for a Sustainable Future
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-              Professional agricultural consultancy services combining traditional wisdom with modern technology
-            </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="inline-block border-t-2 border-b-2 border-white py-2 px-8 mb-8">
+              <p className="text-white text-sm md:text-base tracking-widest font-light uppercase">
+                Professional agricultural consultancy services
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center mt-12">
               <Link
                 to="/services"
-                className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center text-lg"
+                className="bg-white text-black px-8 py-4 rounded-lg  hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center text-lg uppercase tracking-wide"
               >
                 Explore Services
                 <ArrowRight className="ml-2 h-6 w-6" />
               </Link>
               <Link
                 to="/contact"
-                className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 backdrop-blur-sm inline-flex items-center text-lg"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg  hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center text-lg uppercase tracking-wide"
               >
-                Get Free Consultation
+                Get Consultation
               </Link>
             </div>
           </div>
@@ -143,7 +151,7 @@ const Home = () => {
       <section className="py-20 bg-gray-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-4xl  text-gray-800 mb-6">
               Leading Agricultural Consultancy in Sri Lanka
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -164,7 +172,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-800 mb-6">Our Services</h2>
+            <h2 className="text-5xl  text-gray-800 mb-6">Our Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive agricultural solutions tailored to your needs
             </p>
@@ -178,7 +186,7 @@ const Home = () => {
                 {/* Left side - Colored section with text */}
                 <div className={`w-1/2 bg-gradient-to-br ${service.bgColor} p-8 flex flex-col justify-between text-white`}>
                   <div>
-                    <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                    <h3 className="text-2xl  mb-3">{service.title}</h3>
                     <p className="text-white text-opacity-90 text-sm">{service.description}</p>
                   </div>
                   <button className="self-start bg-white text-gray-800 px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md text-sm">
@@ -202,7 +210,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">Success Stories</h2>
+            <h2 className="text-5xl  text-gray-800 mb-4">Success Stories</h2>
             <p className="text-xl text-gray-600">
               Real results from our agricultural projects
             </p>
@@ -217,7 +225,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <h3 className="text-3xl font-bold mb-2">{projects[currentSlide].title}</h3>
+                  <h3 className="text-3xl  mb-2">{projects[currentSlide].title}</h3>
                   <p className="text-lg mb-2">{projects[currentSlide].location}</p>
                   <p className="text-primary-300 font-semibold">{projects[currentSlide].impact}</p>
                 </div>
@@ -256,22 +264,22 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
               <Users className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl font-bold mb-2">500+</div>
+              <div className="text-4xl  mb-2">500+</div>
               <div className="text-primary-100">Happy Farmers</div>
             </div>
             <div>
               <Award className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl font-bold mb-2">150+</div>
+              <div className="text-4xl  mb-2">150+</div>
               <div className="text-primary-100">Successful Projects</div>
             </div>
             <div>
               <TrendingUp className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl font-bold mb-2">40%</div>
+              <div className="text-4xl  mb-2">40%</div>
               <div className="text-primary-100">Average Yield Increase</div>
             </div>
             <div>
               <GraduationCap className="h-12 w-12 mx-auto mb-4 opacity-80" />
-              <div className="text-4xl font-bold mb-2">1000+</div>
+              <div className="text-4xl  mb-2">1000+</div>
               <div className="text-primary-100">Trained Farmers</div>
             </div>
           </div>
@@ -282,7 +290,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+            <h2 className="text-5xl  text-gray-800 mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-600">
               Trusted by farmers and agribusinesses across Sri Lanka
             </p>
@@ -296,7 +304,7 @@ const Home = () => {
                 <div className="text-primary-600 text-5xl mb-4">"</div>
                 <p className="text-gray-700 text-lg mb-6 italic">{testimonial.text}</p>
                 <div>
-                  <p className="font-bold text-gray-800">{testimonial.name}</p>
+                  <p className=" text-gray-800">{testimonial.name}</p>
                   <p className="text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
@@ -309,7 +317,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">Latest from Our Blog</h2>
+            <h2 className="text-5xl  text-gray-800 mb-4">Latest from Our Blog</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Insights and updates from the world of agriculture
             </p>
@@ -339,7 +347,7 @@ const Home = () => {
                     </svg>
                     {post.date}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-primary-600 transition-colors">
+                  <h3 className="text-xl  text-gray-800 mb-3 line-clamp-2 group-hover:text-primary-600 transition-colors">
                     {post.title}
                   </h3>
                   <Link

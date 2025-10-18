@@ -179,7 +179,7 @@ const Projects = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">Our Projects</h1>
+            <h1 className="text-5xl  mb-6">Our Projects</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Transforming agriculture through innovative projects and sustainable solutions
             </p>
@@ -192,25 +192,25 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">
+              <div className="text-4xl  text-primary-600 mb-2">
                 {projects.length}
               </div>
               <div className="text-gray-600">Total Projects</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">
+              <div className="text-4xl  text-primary-600 mb-2">
                 {totalFarmers}+
               </div>
               <div className="text-gray-600">Farmers Impacted</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">
+              <div className="text-4xl  text-primary-600 mb-2">
                 {totalHectares}+
               </div>
               <div className="text-gray-600">Hectares Covered</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">
+              <div className="text-4xl  text-primary-600 mb-2">
                 {projects.filter(p => p.status === 'ongoing').length}
               </div>
               <div className="text-gray-600">Ongoing Projects</div>
@@ -299,7 +299,7 @@ const Projects = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                  <h3 className="text-2xl  text-gray-800 mb-3">
                     {project.title}
                   </h3>
 
@@ -319,7 +319,7 @@ const Projects = () => {
                   </p>
 
                   <div className="border-t border-gray-200 pt-4 mb-4">
-                    <h4 className="font-bold text-gray-800 mb-3">Key Outcomes:</h4>
+                    <h4 className=" text-gray-800 mb-3">Key Outcomes:</h4>
                     <ul className="space-y-2">
                       {project.outcomes.map((outcome, index) => (
                         <li key={index} className="flex items-start text-sm">
@@ -335,17 +335,17 @@ const Projects = () => {
                   <div className="grid grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg">
                     <div className="text-center">
                       <Users className="h-5 w-5 text-primary-600 mx-auto mb-1" />
-                      <div className="font-bold text-gray-800">{project.impact.farmers}</div>
+                      <div className=" text-gray-800">{project.impact.farmers}</div>
                       <div className="text-xs text-gray-600">Farmers</div>
                     </div>
                     <div className="text-center">
                       <MapPin className="h-5 w-5 text-primary-600 mx-auto mb-1" />
-                      <div className="font-bold text-gray-800">{project.impact.hectares}</div>
+                      <div className=" text-gray-800">{project.impact.hectares}</div>
                       <div className="text-xs text-gray-600">Hectares</div>
                     </div>
                     <div className="text-center">
                       <TrendingUp className="h-5 w-5 text-primary-600 mx-auto mb-1" />
-                      <div className="font-bold text-gray-800">{project.impact.increase}</div>
+                      <div className=" text-gray-800">{project.impact.increase}</div>
                       <div className="text-xs text-gray-600">Increase</div>
                     </div>
                   </div>
@@ -375,7 +375,7 @@ const Projects = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl  mb-6">
             Want to Start a Project with Us?
           </h2>
           <p className="text-xl mb-8 text-primary-100">

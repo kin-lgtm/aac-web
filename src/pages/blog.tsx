@@ -162,7 +162,7 @@ const Blog = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">Blog & News</h1>
+            <h1 className="text-5xl  mb-6">Blog & News</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8">
               Latest insights, tips, and updates from the world of agriculture
             </p>
@@ -191,7 +191,7 @@ const Blog = () => {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-gray-50 rounded-xl p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Categories</h3>
+                <h3 className="text-xl  text-gray-800 mb-4">Categories</h3>
                 <div className="space-y-2">
                   {categories.map((category) => (
                     <button
@@ -216,7 +216,7 @@ const Blog = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Popular Tags</h3>
+                  <h3 className="text-xl  text-gray-800 mb-4">Popular Tags</h3>
                   <div className="flex flex-wrap gap-2">
                     {['IoT', 'Sustainability', 'Organic', 'Smart Farming', 'Climate', 'Technology'].map((tag) => (
                       <span
@@ -256,7 +256,7 @@ const Blog = () => {
                         <span className="text-sm text-gray-500">{post.readTime}</span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-gray-800 mb-3 leading-tight">
+                      <h3 className="text-xl  text-gray-800 mb-3 leading-tight">
                         {post.title}
                       </h3>
 

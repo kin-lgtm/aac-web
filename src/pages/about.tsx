@@ -67,7 +67,7 @@ const About = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">About Us</h1>
+            <h1 className="text-5xl  mb-6">About Us</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Bridging tradition and innovation to create a sustainable agricultural future for Asia
             </p>
@@ -80,7 +80,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
+              <h2 className="text-4xl  text-gray-800 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
                   Founded in 2010, Asian Agricultural Consultancies emerged from a vision to revolutionize farming practices across Sri Lanka and the broader Asian region. Our journey began with a small team of passionate agricultural experts who recognized the need for professional consultancy services that could bridge the gap between traditional farming wisdom and modern agricultural science.
@@ -100,7 +100,7 @@ const About = () => {
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white p-8 rounded-xl shadow-xl">
-                <div className="text-4xl font-bold mb-2">14+</div>
+                <div className="text-4xl  mb-2">14+</div>
                 <div className="text-primary-100">Years of Excellence</div>
               </div>
             </div>
@@ -116,7 +116,7 @@ const About = () => {
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Target className="h-8 w-8 text-primary-600" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+              <h2 className="text-3xl  text-gray-800 mb-4">Our Mission</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 To empower farmers and agribusinesses with expert knowledge, innovative solutions, and sustainable practices that enhance productivity, profitability, and environmental stewardship. We are committed to being the trusted partner for agricultural excellence across Asia.
               </p>
@@ -125,7 +125,7 @@ const About = () => {
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Eye className="h-8 w-8 text-primary-600" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Vision</h2>
+              <h2 className="text-3xl  text-gray-800 mb-4">Our Vision</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 To be recognized as the leading agricultural consultancy in Asia, known for transforming farming communities through innovation, education, and sustainable practices. We envision a future where every farmer has access to world-class expertise and technology.
               </p>
@@ -138,7 +138,7 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Core Values</h2>
+            <h2 className="text-4xl  text-gray-800 mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-600">
               The principles that guide our work and relationships
             </p>
@@ -150,7 +150,7 @@ const About = () => {
                 className="text-center p-8 bg-gray-50 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="text-primary-600 mx-auto mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{value.title}</h3>
+                <h3 className="text-xl  text-gray-800 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
@@ -162,7 +162,7 @@ const About = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Meet Our Team</h2>
+            <h2 className="text-4xl  text-gray-800 mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-600">
               Expert professionals dedicated to your agricultural success
             </p>
@@ -179,7 +179,7 @@ const About = () => {
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
+                  <h3 className="text-xl  text-gray-800 mb-2">{member.name}</h3>
                   <p className="text-primary-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm">{member.bio}</p>
                 </div>
@@ -193,7 +193,7 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Partners & Clients</h2>
+            <h2 className="text-4xl  text-gray-800 mb-4">Our Partners & Clients</h2>
             <p className="text-xl text-gray-600">
               Collaborating with leading organizations in the agricultural sector
             </p>
@@ -216,7 +216,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Award className="h-16 w-16 mx-auto mb-4 opacity-80" />
-            <h3 className="text-2xl font-bold mb-2">Officially Registered & Certified</h3>
+            <h3 className="text-2xl  mb-2">Officially Registered & Certified</h3>
             <p className="text-primary-100 text-lg">
               Registration Number: W/102846
             </p>

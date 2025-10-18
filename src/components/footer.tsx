@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                 <Leaf className="h-6 w-6 text-green-700" />
               </div>
               <div>
-                <h3 className="text-lg font-bold">NEF</h3>
+                <h3 className="text-lg ">NEF</h3>
                 <p className="text-sm text-green-100">National Environmental Forum</p>
               </div>
             </div>

@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
               />
             </div>
             <div className="text-white">
-              <h1 className="text-2xl font-bold">Asian Agricultural</h1>
+              <h1 className="text-2xl ">Asian Agricultural</h1>
               <p className="text-sm text-green-200">Consultancies</p>
             </div>
           </Link>

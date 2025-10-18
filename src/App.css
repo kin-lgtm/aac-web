@@ -24,10 +24,11 @@
   --color-earth-900: #713f12;
 }
 
-#root {
+.h1 {
   /* background-color: var(--color-primary-900); */
   color: var(--color-earth-900);
-  font-family: 'Inter', sans-serif;
+  font-family: Impact, "Arial Black", sans-serif;
+  letter-spacing: 0.02em;
   min-height: 100vh;
 }
 /* Buttons */
