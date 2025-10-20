@@ -287,7 +287,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Alternative Contact Methods */}
+      {/* Alternative Contact Methods
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -335,7 +335,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
