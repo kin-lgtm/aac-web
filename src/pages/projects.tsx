@@ -371,21 +371,6 @@ const Projects = () => {
           )}
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl  mb-6">
-            Want to Start a Project with Us?
-          </h2>
-          <p className="text-xl mb-8 text-primary-100">
-            Let's work together to transform your agricultural operations
-          </p>
-          <button className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
-            Discuss Your Project
-          </button>
-        </div>
-      </section>
     </div>
   );
 };
