@@ -1,31 +1,56 @@
 // src/pages/About.tsx
-import { Target, Eye, Users, Award, Handshake, Globe } from 'lucide-react';
+import { Target, Eye } from 'lucide-react';
 
 const About = () => {
   const team = [
     {
-      name: 'Dr. Rajitha Silva',
-      role: 'Chief Agricultural Consultant',
+      name: 'Prof. G D Kapila Kumara',
+      title: 'PhD in Horticulture',
+      role: 'Consultant Agronomist',
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400',
-      bio: 'Ph.D. in Agricultural Sciences with 20+ years of experience in crop management.',
+      experience: 'More than 20 years of experience in Agronomy, Horticulture, Postharvest Management, Protected Agriculture, Floriculture',
     },
     {
-      name: 'Nimal Fernando',
-      role: 'Soil Science Specialist',
+      name: 'Prof. C K Beneragama',
+      title: 'PhD in Horticulture',
+      role: 'Consultant Agronomist',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
-      bio: 'Expert in soil analysis and sustainable farming practices.',
+      experience: 'More than 20 years of experience in Agronomy, Horticulture, Postharvest Management, Floriculture, Personality Development, Stress Management, Artificial Intelligence',
     },
     {
-      name: 'Priya Jayawardena',
-      role: 'Agri-Tech Director',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400',
-      bio: 'Specializes in implementing modern technology solutions in agriculture.',
-    },
-    {
-      name: 'Chaminda Perera',
-      role: 'Training Coordinator',
+      name: 'Prof. P K Dissanayake',
+      title: 'PhD in Horticulture',
+      role: 'Consultant Horticulturist',
       image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400',
-      bio: 'Passionate about farmer education and capacity building programs.',
+      experience: 'More than 20 years of experience in Horticulture, Biotechnology, Fruit Cultivation, Bee Keeping, Landscape Horticulture and Architecture',
+    },
+    {
+      name: 'Dr. (Mrs.) B M V S Basnayake',
+      title: 'PhD in Plant Pathology',
+      role: 'Consultant Plant Pathologist',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400',
+      experience: 'More than 20 years of experience in Plant Pathology and Agricultural Technology',
+    },
+    {
+      name: 'Mr. Gayan Abeysinghe',
+      title: 'BSc. Agriculture',
+      role: 'Gardening and Landscaping Specialist',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
+      experience: 'More than 20 years of experience in Gardening and Landscaping',
+    },
+    {
+      name: 'Dr. Buddhi',
+      title: 'BSc. Agriculture',
+      role: 'Gardening and Landscaping Architect',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400',
+      experience: 'More than 15 years of experience in Gardening and Landscaping Architecture',
+    },
+    {
+      name: 'Mrs. Kalpana Colombage',
+      title: '',
+      role: '',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
+      experience: '',
     },
   ];
 
@@ -58,24 +83,24 @@ const About = () => {
 
   const values = [
     {
-      icon: <Target className="h-8 w-8" />,
+      image: '/images/icon-1.png',
       title: 'Excellence',
       description: 'We strive for the highest quality in all our services and solutions.',
     },
     {
-      icon: <Handshake className="h-8 w-8" />,
+      image: '/images/icon-2.png',
       title: 'Integrity',
       description: 'Honest advice and transparent practices guide everything we do.',
     },
     {
-      icon: <Users className="h-8 w-8" />,
+      image: '/images/icon-3.png',
       title: 'Collaboration',
-      description: 'Working together with farmers for mutual success and growth.',
+      description: 'Working together with farmers and agribusinesses for mutual success and growth.',
     },
     {
-      icon: <Globe className="h-8 w-8" />,
+      image: '/images/icon-4.png',
       title: 'Sustainability',
-      description: 'Committed to environmentally responsible agricultural practices.',
+      description: 'Committed to environmentally responsible agricultural practices along with socioeconomic sustainability.',
     },
   ];
 
@@ -101,13 +126,13 @@ const About = () => {
               <h2 className="text-4xl  text-gray-800 mb-6" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Our Story</h2>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  Founded in 2010, Asian Agricultural Consultancies emerged from a vision to revolutionize farming practices across Sri Lanka and the broader Asian region. Our journey began with a small team of passionate agricultural experts who recognized the need for professional consultancy services that could bridge the gap between traditional farming wisdom and modern agricultural science.
+                  Founded in 2010, Asian Agricultural Consultancies emerged from a vision to revolutionize farming practices across Sri Lanka and the broader Asian region. Our journey began with a small team of passionate agricultural experts who recognized the need for professional consultancy services that could bridge the gap between traditional farming wisdom and modern agricultural production & agribusiness.
                 </p>
                 <p>
-                  Over the years, we have grown into a leading consultancy firm, serving hundreds of farmers, agribusinesses, and agricultural enterprises. Our deep understanding of Asian agricultural systems, combined with expertise in cutting-edge farming technologies, positions us uniquely to deliver solutions that are both practical and transformative.
+                  Over the years, we have grown into a leading consultancy firm, serving hundreds of farmers, agribusinesses, and agricultural enterprises. Our deep understanding of Asian agricultural systems, combined with expertise in cutting-edge farming and value chain management technologies, positions us uniquely to deliver solutions that are both practical and transformative.
                 </p>
                 <p>
-                  Based in Rathmalana, we maintain strong connections with local farming communities while leveraging global best practices and innovations. Our work spans rice paddies, tea plantations, vegetable farms, and fruit orchards, helping cultivate success across diverse agricultural landscapes.
+                  Based in Rathmalana, we maintain strong connections with local farming communities while leveraging global best practices and innovations. Our expertise spans food crop production, livestock production, value chain management & postharvest handling, floriculture & landscaping, agribusiness management and research & data services, helping them boost yields,  manage resources and improve profitability through science-based, tech-driven strategies across diverse agricultural landscapes.   
                 </p>
               </div>
             </div>
@@ -115,12 +140,13 @@ const About = () => {
               <img
                 src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800"
                 alt="Our Story"
-                className="rounded-2xl shadow-2xl"
+                className=" p-3 w-full h-full object-cover"
               />
-              <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white p-8 rounded-xl shadow-xl">
-                <div className="text-4xl  mb-2">14+</div>
-                <div className="text-primary-100">Years of Excellence</div>
-              </div>
+              <img
+                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800"
+                alt="Our Story"
+                className="p-3 w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -145,7 +171,7 @@ const About = () => {
               </div>
               <h2 className="text-3xl  text-gray-800 mb-4" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Our Vision</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To be recognized as the leading agricultural consultancy in Asia, known for transforming farming communities through innovation, education, and sustainable practices. We envision a future where every farmer has access to world-class expertise and technology.
+                To be recognized as the leading agricultural consultancy in Asia, known for transforming farming communities and agribusinesses through innovation, education, and sustainable practices. We envision a future where every farmer and agribusiness have access to world-class expertise and technology.
               </p>
             </div>
           </div>
@@ -165,9 +191,11 @@ const About = () => {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="text-center p-8 bg-gradient-to-r from-yellow-600/50 to-green-800/50  hover:shadow-xl transition-all duration-300 "
+                className="text-center p-8 bg-white shadow-xl transition-all duration-300 "
               >
-                <div className="text-center text-green-800 mx-auto mb-4">{value.icon}</div>
+                <div className="flex justify-center items-center mx-auto mb-4">
+                  <img src={value.image} alt={value.title} className="h-24 w-24 object-contain" />
+                </div>
                 <h3 className="text-xl text-gray-800 mb-3" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
@@ -177,7 +205,7 @@ const About = () => {
       </section>
 
       {/* Our Team */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl text-gray-800 mb-4" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>Meet Our Team</h2>
@@ -185,11 +213,11 @@ const About = () => {
               Expert professionals dedicated to your agricultural success
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="bg-white overflow-hidden shadow-lg transition-all duration-300"
               >
                 <img
                   src={member.image}
@@ -197,9 +225,10 @@ const About = () => {
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl  text-gray-800 mb-2">{member.name}</h3>
-                  <p className="text-primary-600 font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
+                  {member.title && <p className="text-sm text-gray-500 mb-2">({member.title})</p>}
+                  {member.role && <p className="text-primary-600 font-semibold mb-3">{member.role}</p>}
+                  {member.experience && <p className="text-gray-600 text-sm leading-relaxed">{member.experience}</p>}
                 </div>
               </div>
             ))}
@@ -257,7 +286,7 @@ const About = () => {
       </section>
 
       {/* Registration Info */}
-      <section className="py-16 bg-primary-600 text-gray-800">
+      {/* <section className="py-16 bg-primary-600 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Award className="h-16 w-16 mx-auto mb-4 opacity-80" />
@@ -270,7 +299,7 @@ const About = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

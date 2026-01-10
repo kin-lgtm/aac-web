@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Information */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-gray-800" style={{ fontFamily: 'Roboto, sans-serif' }}>
-              <span className="text-primary-600">AMK</span> - Asian Agricultural Consultancies
+              <span className="text-primary-600">AAC</span> - Asian Agricultural Consultancies
             </h3>
             <p className="text-sm text-gray-600 mb-2">
               No. 53, Sri Dharmarama Road, Rathmalana
