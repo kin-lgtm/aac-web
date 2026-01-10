@@ -1,6 +1,8 @@
 // src/pages/Blog.tsx
 import { useState } from 'react';
-import { Search, Calendar, ArrowRight, Tag } from 'lucide-react';
+import { Search, Calendar, Tag } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import blogPosts from '../data/blogPosts.json';
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,141 +14,6 @@ const Blog = () => {
     { value: 'sustainability', label: 'Sustainability', count: 3 },
     { value: 'crops', label: 'Crops', count: 3 },
     { value: 'farmers', label: "Farmers' Voices", count: 2 },
-  ];
-
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'The Future of Smart Farming in Asia: IoT and AI Revolution',
-      excerpt: 'Explore how Internet of Things sensors and Artificial Intelligence are transforming traditional farming practices across Asian countries, making agriculture more efficient and sustainable.',
-      image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600',
-      category: 'technology',
-      author: 'Dr. Rajitha Silva',
-      date: 'October 15, 2025',
-      readTime: '8 min read',
-      tags: ['IoT', 'AI', 'Smart Farming'],
-    },
-    {
-      id: 2,
-      title: 'Complete Guide to Organic Certification for Small Farmers',
-      excerpt: 'Step-by-step guide covering everything you need to know about obtaining organic certification, from documentation to compliance and market access opportunities.',
-      image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600',
-      category: 'sustainability',
-      author: 'Priya Jayawardena',
-      date: 'October 10, 2025',
-      readTime: '12 min read',
-      tags: ['Organic', 'Certification', 'Sustainability'],
-    },
-    {
-      id: 3,
-      title: '10 Essential Water Management Tips for Rice Farmers',
-      excerpt: 'Practical water conservation strategies that can reduce consumption by up to 40% while maintaining or improving crop yields in rice cultivation.',
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600',
-      category: 'crops',
-      author: 'Nimal Fernando',
-      date: 'October 5, 2025',
-      readTime: '6 min read',
-      tags: ['Water Management', 'Rice', 'Conservation'],
-    },
-    {
-      id: 4,
-      title: 'Climate-Resilient Farming: Adapting to Changing Weather Patterns',
-      excerpt: 'Learn about climate-smart agriculture practices that help farmers adapt to unpredictable weather while maintaining productivity and profitability.',
-      image: 'https://images.unsplash.com/photo-1592982537447-7440770cbfc9?w=600',
-      category: 'sustainability',
-      author: 'Dr. Rajitha Silva',
-      date: 'September 28, 2025',
-      readTime: '10 min read',
-      tags: ['Climate Change', 'Resilience', 'Adaptation'],
-    },
-    {
-      id: 5,
-      title: 'Success Story: How Drone Technology Increased My Yield by 35%',
-      excerpt: 'A farmer shares his experience implementing drone-based crop monitoring and precision spraying, resulting in significant yield improvements and cost savings.',
-      image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600',
-      category: 'farmers',
-      author: 'Sunil Perera',
-      date: 'September 20, 2025',
-      readTime: '7 min read',
-      tags: ['Drones', 'Success Story', 'Technology'],
-    },
-    {
-      id: 6,
-      title: 'Soil Health: The Foundation of Sustainable Agriculture',
-      excerpt: 'Understanding soil composition, nutrient cycles, and practical methods to improve soil health for long-term agricultural productivity.',
-      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600',
-      category: 'sustainability',
-      author: 'Nimal Fernando',
-      date: 'September 15, 2025',
-      readTime: '9 min read',
-      tags: ['Soil Health', 'Nutrients', 'Sustainability'],
-    },
-    {
-      id: 7,
-      title: 'Tea Plantation Management: Modern Techniques for Quality',
-      excerpt: 'Latest innovations in tea cultivation, from pruning techniques to processing methods that enhance quality and market value.',
-      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600',
-      category: 'crops',
-      author: 'Chaminda Perera',
-      date: 'September 8, 2025',
-      readTime: '11 min read',
-      tags: ['Tea', 'Quality', 'Management'],
-    },
-    {
-      id: 8,
-      title: 'Integrated Pest Management: Reducing Chemical Dependency',
-      excerpt: 'Explore eco-friendly pest control strategies that protect crops while minimizing environmental impact and reducing costs.',
-      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600',
-      category: 'technology',
-      author: 'Priya Jayawardena',
-      date: 'August 30, 2025',
-      readTime: '8 min read',
-      tags: ['IPM', 'Pest Control', 'Organic'],
-    },
-    {
-      id: 9,
-      title: 'Market Trends 2025: What Crops Are in High Demand?',
-      excerpt: 'Analysis of current market trends, export opportunities, and crop predictions for farmers planning their next season.',
-      image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600',
-      category: 'crops',
-      author: 'Dr. Rajitha Silva',
-      date: 'August 22, 2025',
-      readTime: '10 min read',
-      tags: ['Market Trends', 'Economics', 'Planning'],
-    },
-    {
-      id: 10,
-      title: 'From Conventional to Organic: A Farmer\'s Journey',
-      excerpt: 'Personal account of transitioning from chemical-intensive farming to certified organic production, including challenges and rewards.',
-      image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5?w=600',
-      category: 'farmers',
-      author: 'Lakshmi Fernando',
-      date: 'August 15, 2025',
-      readTime: '6 min read',
-      tags: ['Organic', 'Transition', 'Personal Story'],
-    },
-    {
-      id: 11,
-      title: 'Blockchain in Agriculture: Traceability and Transparency',
-      excerpt: 'How blockchain technology is revolutionizing supply chain management, ensuring product authenticity and fair pricing for farmers.',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600',
-      category: 'technology',
-      author: 'Priya Jayawardena',
-      date: 'August 8, 2025',
-      readTime: '9 min read',
-      tags: ['Blockchain', 'Supply Chain', 'Technology'],
-    },
-    {
-      id: 12,
-      title: 'Vertical Farming: The Future of Urban Agriculture',
-      excerpt: 'Introduction to vertical farming systems and their potential for urban food production in space-constrained Asian cities.',
-      image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600',
-      category: 'technology',
-      author: 'Chaminda Perera',
-      date: 'August 1, 2025',
-      readTime: '7 min read',
-      tags: ['Vertical Farming', 'Urban Agriculture', 'Innovation'],
-    },
   ];
 
   const filteredPosts = blogPosts.filter(post => {
@@ -162,7 +29,7 @@ const Blog = () => {
       <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl  mb-6">Blog & News</h1>
+            <h1 className="text-5xl  mb-6">Blog</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8">
               Latest insights, tips, and updates from the world of agriculture
             </p>
@@ -239,14 +106,15 @@ const Blog = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredPosts.map((post) => (
-                  <div
+                  <Link
                     key={post.id}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    to={`/blog/${post.id}`}
+                    className="bg-white shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
                   >
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-3">
@@ -255,7 +123,6 @@ const Blog = () => {
                         </span>
                         <span className="text-sm text-gray-500">{post.readTime}</span>
                       </div>
-
                       <h3 className="text-xl  text-gray-800 mb-3 leading-tight">
                         {post.title}
                       </h3>
@@ -271,9 +138,9 @@ const Blog = () => {
                             {post.date}
                           </div>
                         </div>
-                        <button className="text-primary-600 font-semibold hover:text-primary-700 inline-flex items-center">
-                          Read
-                          <ArrowRight className="ml-1 h-4 w-4" />
+                        <button className="text-gray-600 font-semibold border-2 border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-600 hover:text-white hover:border-gray-600 transition-all inline-flex items-center gap-2">
+                          Read More
+                        
                         </button>
                       </div>
 
@@ -289,7 +156,7 @@ const Blog = () => {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 
@@ -311,9 +178,6 @@ const Blog = () => {
           </div>
         </div>
       </section>
-
-      {/* Newsletter CTA */}
-      
     </div>
   );
 };
