@@ -5,11 +5,13 @@ import './index.css';
 
 import './App.css'
 import App from './App.tsx';
+import ScrollToTop from './components/ScrollToTop.tsx';
 import Homepage from './pages/home.tsx'; // Import homepage!
 import About from './pages/about.tsx';
 import Services from './pages/services.tsx';
 import Projects from './pages/projects.tsx';
 import Blog from './pages/blog.tsx';
+import BlogDetail from './pages/blog-detail.tsx';
 import Contact from './pages/contact.tsx';
 import AgriculturalConsulting from './pages/agricultural-consulting.tsx';
 import TrainingWorkshops from './pages/training-workshops.tsx';
@@ -21,6 +23,7 @@ import Resources from './pages/resources.tsx';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Homepage />} /> {/* Homepage at root */}
@@ -28,6 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="services" element={<Services />} /> {/* About at /about */}
           <Route path="projects" element={<Projects />} /> {/* About at /about */}
           <Route path="blog" element={<Blog />} /> {/* About at /about */}
+          <Route path="blog/:id" element={<BlogDetail />} /> {/* Blog detail page */}
           <Route path="contact" element={<Contact />} /> {/* About at /about */}
           <Route path="/services/agricultural-consulting" element={<AgriculturalConsulting />} />
         <Route path="/services/training-workshops" element={<TrainingWorkshops />} />

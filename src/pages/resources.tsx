@@ -24,19 +24,44 @@ const Resources = () => {
 
   const usefulLinks = [
     {
-      title: 'FAO - Food and Agriculture Organization',
+      title: 'Department of Agriculture',
+      description: 'Official resources and information from the Sri Lankan Department of Agriculture.',
+      url: 'https://www.doa.gov.lk',
+    },
+    {
+      title: 'Export Development Board',
+      description: 'Support and guidance for agricultural exports from Sri Lanka.',
+      url: 'https://www.srilankabusiness.com',
+    },
+    {
+      title: 'Tea Research Institute',
+      description: 'Research and innovation in tea cultivation and production.',
+      url: 'https://www.tri.lk',
+    },
+    {
+      title: 'Coconut Research Institute',
+      description: 'Advanced research and development for coconut industry.',
+      url: 'https://www.cri.lk',
+    },
+    {
+      title: 'Rubber Research Institute',
+      description: 'Scientific research and technical services for rubber cultivation.',
+      url: 'https://www.rrisl.lk',
+    },
+    {
+      title: 'Hector Kobbekaduwa Agrarian Research Institute',
+      description: 'Research on agrarian development and agricultural policies.',
+      url: 'https://www.harti.gov.lk',
+    },
+    {
+      title: 'Meteorological Department',
+      description: 'Weather forecasts and climate information for agricultural planning.',
+      url: 'https://www.meteo.gov.lk',
+    },
+    {
+      title: 'Food and Agriculture Organization',
       description: 'Global resources for sustainable agriculture and food security.',
       url: 'https://www.fao.org',
-    },
-    {
-      title: 'Sri Lanka Ministry of Agriculture',
-      description: 'Official resources and policies for agricultural development in Sri Lanka.',
-      url: 'https://www.agrimin.gov.lk',
-    },
-    {
-      title: 'International Rice Research Institute (IRRI)',
-      description: 'Research and resources for rice farming and innovation.',
-      url: 'https://www.irri.org',
     },
   ];
 
@@ -56,21 +81,21 @@ const Resources = () => {
       </section>
 
       {/* Downloads Section */}
-      <section className="py-20 bg-green-50">
+      <section className="py-10 bg-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl text-gray-800 mb-4" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>
               Downloads
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Download our expertly crafted guides, reports, and brochures to enhance your agricultural knowledge.
+              Download useful guides, reports, and brochures to enhance your agricultural knowledge.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {downloads.map((resource, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+                className="bg-white shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
               >
                 <div className="relative overflow-hidden">
                   <img

@@ -1,10 +1,16 @@
 // src/pages/Projects.tsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MapPin, Calendar, TrendingUp, Users, Filter } from 'lucide-react';
 
 const Projects = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [selectedCountry, setSelectedCountry] = useState('all');
+  const [animatedStats, setAnimatedStats] = useState({
+    projects: 0,
+    farmers: 0,
+    hectares: 0,
+    ongoing: 0,
+  });
 
   const projects = [
     {
@@ -51,94 +57,7 @@ const Projects = () => {
         increase: '25%',
       },
     },
-    {
-      id: 3,
-      title: 'Smart Irrigation Systems Implementation',
-      location: 'Anuradhapura, Sri Lanka',
-      country: 'Sri Lanka',
-      crop: 'Vegetables',
-      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800',
-      date: '2024 - Ongoing',
-      status: 'ongoing',
-      description: 'Installation of sensor-based drip irrigation systems across 500 acres of vegetable farms. Real-time monitoring through mobile apps and automated scheduling.',
-      outcomes: [
-        'Water savings of 40%',
-        'Crop yield improvement of 28%',
-        'Labor cost reduction of 35%',
-        'Year-round cultivation enabled',
-      ],
-      impact: {
-        farmers: 200,
-        hectares: 200,
-        increase: '28%',
-      },
-    },
-    {
-      id: 4,
-      title: 'Coconut Integrated Farming Model',
-      location: 'Kurunegala, Sri Lanka',
-      country: 'Sri Lanka',
-      crop: 'Coconut',
-      image: 'https://images.unsplash.com/photo-1598958718959-c1b9c961c1c0?w=800',
-      date: '2023 - 2024',
-      status: 'completed',
-      description: 'Development of multi-crop integrated farming system under coconut canopy including cocoa, pepper, and pineapple. Comprehensive training and market development.',
-      outcomes: [
-        'Farm income increased by 60%',
-        'Land use efficiency improved by 45%',
-        'Biodiversity enhancement achieved',
-        'Climate resilience strengthened',
-      ],
-      impact: {
-        farmers: 120,
-        hectares: 300,
-        increase: '60%',
-      },
-    },
-    {
-      id: 5,
-      title: 'Precision Agriculture Pilot Project',
-      location: 'Polonnaruwa, Sri Lanka',
-      country: 'Sri Lanka',
-      crop: 'Rice',
-      image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800',
-      date: '2024 - Ongoing',
-      status: 'ongoing',
-      description: 'Introduction of drone technology for crop monitoring, pest detection, and precision spraying. Data analytics platform for yield prediction and resource optimization.',
-      outcomes: [
-        'Pesticide use reduced by 50%',
-        'Early pest detection accuracy: 92%',
-        'Input cost savings of 30%',
-        'Yield prediction accuracy: 88%',
-      ],
-      impact: {
-        farmers: 100,
-        hectares: 250,
-        increase: '32%',
-      },
-    },
-    {
-      id: 6,
-      title: 'Fruit Export Quality Enhancement',
-      location: 'Embilipitiya, Sri Lanka',
-      country: 'Sri Lanka',
-      crop: 'Fruits',
-      image: 'https://images.unsplash.com/photo-1519897831810-a9a01aceccd1?w=800',
-      date: '2023 - 2024',
-      status: 'completed',
-      description: 'Comprehensive quality improvement program for mango and papaya exporters. Installation of pack houses, cold storage, and GlobalGAP certification assistance.',
-      outcomes: [
-        'Export volume increased by 80%',
-        'Rejection rate decreased from 15% to 3%',
-        '20 farms GlobalGAP certified',
-        'New markets accessed in Middle East',
-      ],
-      impact: {
-        farmers: 60,
-        hectares: 100,
-        increase: '80%',
-      },
-    },
+    
   ];
 
   const filters = [
@@ -173,6 +92,40 @@ const Projects = () => {
   const totalFarmers = projects.reduce((sum, p) => sum + p.impact.farmers, 0);
   const totalHectares = projects.reduce((sum, p) => sum + p.impact.hectares, 0);
 
+  useEffect(() => {
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    const targets = {
+      projects: projects.length,
+      farmers: totalFarmers,
+      hectares: totalHectares,
+      ongoing: projects.filter(p => p.status === 'ongoing').length,
+    };
+
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+
+      setAnimatedStats({
+        projects: Math.floor(targets.projects * progress),
+        farmers: Math.floor(targets.farmers * progress),
+        hectares: Math.floor(targets.hectares * progress),
+        ongoing: Math.floor(targets.ongoing * progress),
+      });
+
+      if (currentStep >= steps) {
+        setAnimatedStats(targets);
+        clearInterval(timer);
+      }
+    }, stepDuration);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
@@ -192,28 +145,28 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl  text-primary-600 mb-2">
-                {projects.length}
+              <div className="text-4xl font-bold text-gray-900 mb-2">
+                {animatedStats.projects}
               </div>
-              <div className="text-gray-600">Total Projects</div>
+              <div className="text-2xl font-bold text-gray-900">Total Projects</div>
             </div>
             <div>
-              <div className="text-4xl  text-primary-600 mb-2">
-                {totalFarmers}+
+              <div className="text-4xl font-bold text-gray-900 mb-2">
+                {animatedStats.farmers}+
               </div>
-              <div className="text-gray-600">Farmers Impacted</div>
+              <div className="text-2xl font-bold text-gray-900">Farmers Impacted</div>
             </div>
             <div>
-              <div className="text-4xl  text-primary-600 mb-2">
-                {totalHectares}+
+              <div className="text-4xl font-bold text-gray-900 mb-2">
+                {animatedStats.hectares}+
               </div>
-              <div className="text-gray-600">Hectares Covered</div>
+              <div className="text-2xl font-bold text-gray-900">Hectares Covered</div>
             </div>
             <div>
-              <div className="text-4xl  text-primary-600 mb-2">
-                {projects.filter(p => p.status === 'ongoing').length}
+              <div className="text-4xl font-bold text-gray-900 mb-2">
+                {animatedStats.ongoing}
               </div>
-              <div className="text-gray-600">Ongoing Projects</div>
+              <div className="text-2xl font-bold text-gray-900">Ongoing Projects</div>
             </div>
           </div>
         </div>
@@ -272,7 +225,7 @@ const Projects = () => {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white shadow-lg overflow-hidden hover:shadow-xl"
               >
                 <div className="relative h-64">
                   <img
