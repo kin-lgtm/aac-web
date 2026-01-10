@@ -26,10 +26,10 @@ const Blog = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white">
+      <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-[#58a716] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl  mb-6">Blog</h1>
+            <h1 className="text-5xl  mb-6" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>Blog</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8">
               Latest insights, tips, and updates from the world of agriculture
             </p>
@@ -123,7 +123,7 @@ const Blog = () => {
                         </span>
                         <span className="text-sm text-gray-500">{post.readTime}</span>
                       </div>
-                      <h3 className="text-xl  text-gray-800 mb-3 leading-tight">
+                      <h3 className="text-xl font-bold text-gray-800 mb-3 leading-tight">
                         {post.title}
                       </h3>
 

@@ -14,9 +14,6 @@ const Footer = () => {
             <p className="text-sm text-gray-600 mb-2">
               No. 53, Sri Dharmarama Road, Rathmalana
             </p>
-            <p className="text-sm text-gray-600 mb-2">
-              Registration Number: W/102846
-            </p>
             <div className="flex space-x-4 mt-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 transition-colors">
                 <Facebook className="h-6 w-6" />
@@ -113,19 +110,7 @@ const Footer = () => {
                 +94 11 123 4567
               </li>
             </ul>
-            <h4 className="text-lg font-bold mb-2 text-gray-800" style={{ fontFamily: 'Roboto, sans-serif' }}>
-              Newsletter
-            </h4>
-            <form className="flex flex-col space-y-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 rounded-lg text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-600"
-              />
-              <button className="bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                Subscribe
-              </button>
-            </form>
+            
             <div className="mt-4 flex items-center">
               <Globe className="h-5 w-5 mr-2 text-gray-600" />
               <select className="bg-transparent text-sm text-gray-600 focus:outline-none">
@@ -140,7 +125,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-gray-300 text-center">
           <p className="text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} AMK - Asian Agricultural Consultancies. All rights reserved.
+            &copy; {new Date().getFullYear()} ACC - Asian Agricultural Consultancies. All rights reserved.
           </p>
         </div>
       </div>

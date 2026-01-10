@@ -30,17 +30,17 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Office Address',
-      details: ['No. 53, Sri Dharmarama Road', 'Rathmalana, Sri Lanka'],
+      details: ['No. 53, Sri Dharmarama Road', 'Rathmalana'],
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: 'Phone',
-      details: ['+94 11 XXX XXXX', '+94 77 XXX XXXX (Mobile)'],
+      details: ['+94 11 123 4567'],
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email',
-      details: ['info@asianagriculture.lk', 'support@asianagriculture.lk'],
+      details: ['info@asianagriculture.com'],
     },
     {
       icon: <Clock className="h-6 w-6" />,
@@ -52,10 +52,10 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white">
+      <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-[#58a716] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl  mb-6">Contact Us</h1>
+            <h1 className="text-5xl  mb-6" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>Contact Us</h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Get in touch with our team of agricultural experts
             </p>
@@ -70,14 +70,16 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-6 rounded-xl text-center hover:bg-primary-50 transition-all hover:shadow-lg"
+                className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 text-center"
               >
-                <div className="bg-primary-600 text-white w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {info.icon}
+                <div className="flex justify-center mb-4">
+                  <div className="text-white rounded-full p-4" style={{ backgroundColor: '#58a716' }}>
+                    {info.icon}
+                  </div>
                 </div>
-                <h3 className=" text-gray-800 mb-3">{info.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">{info.title}</h3>
                 {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-gray-600 text-sm">
+                  <p key={idx} className="text-sm text-gray-600">
                     {detail}
                   </p>
                 ))}
@@ -89,7 +91,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl  text-gray-800 mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl  text-gray-800 mb-6" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -180,7 +182,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-primary-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-[#58a716] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#4e7e13] transition-colors flex items-center justify-center gap-2"
                 >
                   <Send className="h-5 w-5" />
                   Send Message
@@ -190,7 +192,7 @@ const Contact = () => {
 
             {/* Map and Additional Info */}
             <div>
-              <h2 className="text-3xl  text-gray-800 mb-6">Visit Our Office</h2>
+              <h2 className="text-3xl  text-gray-800 mb-6" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>Visit Our Office</h2>
               
               {/* Google Maps Embed */}
               <div className="bg-gray-200 rounded-xl overflow-hidden shadow-lg mb-6 h-80">
@@ -227,29 +229,17 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Additional Info */}
-              <div className="bg-primary-50 p-6 rounded-xl border-2 border-primary-200">
-                <h3 className=" text-gray-800 mb-3">Registration Information</h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  <strong>Company Name:</strong> Asian Agricultural Consultancies
-                </p>
-                <p className="text-gray-600 text-sm mb-2">
-                  <strong>Registration Number:</strong> W/102846
-                </p>
-                <p className="text-gray-600 text-sm">
-                  <strong>Established:</strong> 2010
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl  text-gray-800 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl  text-gray-800 mb-4" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em' }}>Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600">
               Quick answers to common inquiries
             </p>

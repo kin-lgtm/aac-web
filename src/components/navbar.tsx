@@ -45,18 +45,17 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-[100px]">
           {/* Logo and Brand */}
           <Link to="/" className="flex items-center space-x-4">
-            <div className="bg-green-600 p-3 rounded-full overflow-hidden">
+            <div className="p-1 rounded-full overflow-hidden">
               <img
                 src="/logo.png"
                 alt="Asian Agricultural Consultancies Logo"
-                width={40}
-                height={40}
+                width={80}
+                height={80}
                 className="object-contain"
               />
             </div>
             <div className="text-gray-800">
-              <h1 className="text-2xl font-bold">Asian Agricultural</h1>
-              <p className="text-sm text-green-600">Consultancies</p>
+              <h3 className="text-md font-bold">Asian Agricultural <br />Consultancies</h3>
             </div>
           </Link>
 

@@ -188,21 +188,20 @@ const Home = () => {
       </section>
 
       {/* About Snippet */}
-      <section className="py-20 bg-gradient-to-r from-yellow-600/50 to-green-800/50 mt-20">
+      <section className="py-20 bg-gradient-to-r from-yellow-600/50 to-[#58a716] mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl  text-gray-800 mb-6" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>
               Leading Agricultural Consultancy in Sri Lanka
             </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-900 mb-6 leading-relaxed">
               With more than a decade of combined experience, we provide comprehensive agricultural solutions that blend time-tested farming knowledge with cutting-edge technology. Our mission is to empower farmers and agribusinesses across Asia to achieve sustainable growth and profitability.
             </p>
             <Link
               to="/about"
-              className="text-green-900 font-semibold hover:text-primary-700 inline-flex items-center text-lg"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg  hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center text-lg uppercase tracking-wide"
             >
               Read More About Us
-              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
@@ -388,7 +387,7 @@ const Home = () => {
                     </span>
                     <span className="text-sm text-gray-500">{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl  text-gray-800 mb-3 leading-tight">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 leading-tight">
                     {post.title}
                   </h3>
 

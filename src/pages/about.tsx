@@ -56,28 +56,12 @@ const About = () => {
 
   const partners = [
   {
-    name: 'FAO',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+    name: 'Sri Lanka Foundation Institute',
+    logo: '/images/slf-logo.jfif',
   },
   {
-    name: 'IRRI',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
-  },
-  {
-    name: 'IFAD',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
-  },
-  {
-    name: 'Hayleys Agriculture',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
-  },
-  {
-    name: 'Browns Agri Solutions',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
-  },
-  {
-    name: 'Lankem Agro',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/d/db/FAO_logo.svg',
+    name: 'Sri Lanka Foundation Institute',
+    logo: '/images/slf-logo.jfif',
   },
 ];
 
@@ -107,7 +91,7 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white">
+      <section className="relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-[#58a716] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl  mb-6" style={{fontFamily: 'Impact, "Arial Black", sans-serif', letterSpacing: '0.02em'}}>About Us</h1>
@@ -153,7 +137,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-to-r from-yellow-600/50 to-green-800/50">
+      <section className="py-20 bg-gradient-to-r from-yellow-600/50 to-[#58a716]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-10 rounded-2xl shadow-lg">
@@ -249,16 +233,16 @@ const About = () => {
           </div>
           <div className="overflow-hidden">
             <div className="flex marquee gap-8">
-              {[...partners, ...partners].map((partner, index) => (
+              {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center p-4 rounded-xl min-w-[150px]"
+                  className="flex flex-col items-center justify-center p-4 rounded-xl min-w-[400px]"
                   style={{ pointerEvents: 'none' }}
                 >
                   <img
                     src={partner.logo}
                     alt={`${partner.name} Logo`}
-                    className="h-20 w-auto object-contain mb-2"
+                    className="h-32 w-auto object-contain mb-2"
                   />
                   <p className="text-gray-700 font-semibold text-center text-sm" style={{ fontFamily: 'Roboto, sans-serif' }}>
                     {partner.name}

@@ -25,7 +25,7 @@ const BlogDetail = () => {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="relative py-10 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white">
+      <section className="relative py-10 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-[#58a716] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/blog" className="inline-flex items-center gap-2 text-white hover:text-gray-200 mb-6 transition-colors">
             <ArrowLeft className="h-5 w-5" />

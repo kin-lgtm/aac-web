@@ -20,7 +20,7 @@ const AgriculturalConsulting = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className={`relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-green-800 text-white overflow-hidden`}>
+      <section className={`relative py-20 bg-gradient-to-r from-yellow-600 via-orange-800/90 to-[#58a716] text-white overflow-hidden`}>
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{ backgroundImage: `url(${service.image})` }}
